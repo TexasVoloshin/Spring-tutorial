@@ -1,12 +1,7 @@
-'use strict';
-
-// tag::vars[]
 const React = require('react');
 const ReactDOM = require('react-dom');
 const client = require('./client');
-// end::vars[]
 
-// tag::app[]
 class App extends React.Component {
 
 	constructor(props) {
@@ -26,9 +21,6 @@ class App extends React.Component {
 		)
 	}
 }
-// end::app[]
-
-// tag::employee-list[]
 class EmployeeList extends React.Component{
 	render() {
 		var employees = this.props.employees.map(employee =>
@@ -48,9 +40,6 @@ class EmployeeList extends React.Component{
 		)
 	}
 }
-// end::employee-list[]
-
-// tag::employee[]
 class Employee extends React.Component{
 	render() {
 		return (
@@ -62,12 +51,7 @@ class Employee extends React.Component{
 		)
 	}
 }
-// end::employee[]
-
-// tag::render[]
 ReactDOM.render(
-	<App />,
-	document.getElementById('react')
-)
-// end::render[]
-
+		<App />,
+		document.getElementById('react')
+	)
